@@ -72,7 +72,7 @@ int deletElem(Seqlist* L, int pos,ElemType *e)
     L->length--;
     return 1;
 }
-int findElem(SeqList *L, ElemType e)
+int findElem(Seqlist *L, ElemType e)
 {
 	if (L->length == 0)
 	{

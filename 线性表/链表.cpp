@@ -2,20 +2,20 @@
 using namespace std;  
 typedef int ElemType;
 
-// 链表节点结构体
+// ??????????
 struct Node
 {
     ElemType data;
     Node* next;
 };
-//初始化
+//?????
 Node* initList()
 {
     Node* head = new Node;
     head->next = nullptr;
     return head;
 }
-//尾插法
+//β?巨
 Node* insertTali(Node* tali, ElemType e)
 {
     Node* p = new Node;
@@ -35,7 +35,7 @@ void listNode(Node* L)
     }
     cout << endl;
 }
-//获取尾节点
+//???β???
 Node* get_tali(Node *L)
 {
     Node* p = L;
@@ -45,7 +45,7 @@ Node* get_tali(Node *L)
     }
     return p;
 }
-//删除指定位置
+//??????λ??
 bool deleteNode(Node* L, int pos)
 {
     Node* p = L;
@@ -57,7 +57,7 @@ bool deleteNode(Node* L, int pos)
     }
     if (p == nullptr || p->next == nullptr)
     {
-        cout <<"删除失败，位置错误" << endl;
+        cout <<"???????λ?????" << endl;
         return false;
     }
     Node* q = p->next;
@@ -65,7 +65,7 @@ bool deleteNode(Node* L, int pos)
     delete q;
     return true;
 }
-//释放链表
+//???????
 void freeList(Node* L)
 {
     Node *p =L;
@@ -83,23 +83,23 @@ int main()
     Node* tali = get_tali(list);
 
     int n;
-    cout << "请输入节点个数: ";
+    cout << "???????????: ";
     cin >> n;
-    cout << "请输入" << n <<" 个数据：" <<endl;
+    cout << "??????" << n <<" ???????" <<endl;
     for(int i = 0; i < n; i++)
     {
         int x;
         cin >> x;
         tali = insertTali(tali, x);
     }
-    cout << "当前链表为：";
+    cout << "??????????";
     listNode(list);
 
     int pos;
-    cout <<"请输入要删除的位置：";
+    cout <<"????????????λ???";
     cin >> pos;
     deleteNode(list, pos);
-    cout <<"删除后链表为：";
+    cout <<"????????????";
     listNode(list);
     freeList(list);
     return 0;
